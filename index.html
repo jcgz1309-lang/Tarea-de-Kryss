@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier Artístico</title>
+    <!-- Enlace fundamental al archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navegación Principal -->
+    <header class="main-header">
+        <nav>
+            <a href="index.html" class="logo">Kryss</a>
+            <ul class="nav-links">
+                <li><a href="index.html#galeria" class="active">Galería</a></li>
+                <li><a href="statement.html">Statement</a></li>
+                <li><a href="blog.html">Bitácora</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section id="galeria" class="galeria-section">
+            <div class="container">
+                <h2>Galería de Obras</h2>
+
+                <!-- Controles de Filtro -->
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="todos">Todas</button>
+                    <button class="filter-btn" data-filter="fotografia">Fotografía</button>
+                    <button class="filter-btn" data-filter="videoarte">Videoarte</button>
+                    <button class="filter-btn" data-filter="instalacion">Instalación</button>
+                </div>
+
+                <!-- Grid de Tarjetas -->
+                <div class="galeria-grid">
+
+                    <!-- Obra 1: Fotografía -->
+                    <article class="obra-card" data-category="fotografia">
+                        <a href="obra-detalle.html">
+                            <figure class="card-media">
+                                <img src="assets/img/obra-01.webp" alt="Obra: Eco Sombrío" loading="lazy">
+                                <span class="badge">Fotografía</span>
+                            </figure>
+                            <div class="card-info">
+                                <h3>Eco Sombrío</h3>
+                                <p class="card-meta">2026 — Serie Fotográfica</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Obra 2: Videoarte -->
+                    <article class="obra-card" data-category="videoarte">
+                        <a href="obra-detalle.html">
+                            <figure class="card-media">
+                                <img src="assets/img/obra-02.webp" alt="Obra: Frecuencia Cero" loading="lazy">
+                                <span class="badge">Videoarte</span>
+                            </figure>
+                            <div class="card-info">
+                                <h3>Frecuencia Cero</h3>
+                                <p class="card-meta">2025 — Video Monocanal</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Obra 3: Instalación -->
+                    <article class="obra-card" data-category="instalacion">
+                        <a href="obra-detalle.html">
+                            <figure class="card-media">
+                                <img src="assets/img/obra-03.webp" alt="Obra: Materia Residual" loading="lazy">
+                                <span class="badge">Instalación</span>
+                            </figure>
+                            <div class="card-info">
+                                <h3>Materia Residual</h3>
+                                <p class="card-meta">2026 — Escultura Sonora</p>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 Kryss. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script de Filtros -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
