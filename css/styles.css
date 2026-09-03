@@ -503,3 +503,104 @@ footer {
     color: var(--accent);
     transition: color 0.3s ease;
 }
+/* Contenedor estético para el reproductor de audio */
+.soundcloud-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    background-color: #121212;
+}
+
+.soundcloud-container iframe {
+    display: block;
+    border: none;
+}
+/* Estilos para el contenedor de la imagen (.media-item) */
+/* Tarjeta y contenedor principal de la obra */
+.media-item {
+    max-width: 480px; /* Tamaño ideal para esculturas verticales sin saturar la pantalla */
+    margin: 2rem auto;
+    text-align: center;
+}
+
+/* Marco estético y efectos para la fotografía */
+.media-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    /* Borde sutil para separar el fondo claro de la foto del fondo oscuro de la web */
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor (interactividad refinada) */
+.media-item img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75);
+}
+
+/* Pie de foto tipográfico */
+.media-item figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary, #a0a0a0);
+    font-style: italic;
+}
+/* Estilo estándar para todas las obras (1 sola imagen, reproductor de audio, etc.) */
+.obra-media {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+}
+
+/* Modificador EXCLUSIVO para páginas con 2 o más imágenes lado a lado */
+.obra-media.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    align-items: start;
+}
+
+/* Ajustes de tarjeta e imagen */
+.media-item {
+    margin: 0;
+    text-align: center;
+}
+
+.media-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-item img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+.media-item figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary, #a0a0a0);
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .obra-media.galeria-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
